@@ -2,14 +2,22 @@
 
 $patina: #699;
 $wafer: #e1d7d2;
+$iron: #dadbdf;
+$dawn-pink: #f2ece4;
+$venus: #998099;
+$Purple: #36486b;
 
-#header {
-  text-align: center;
-  background-color: $wafer;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
+body {
+  background-color: $dawn-pink;
 }
+
+// #header {
+//   text-align: center;
+//   background-color: $Purple;
+//   padding-top: 10px;
+//   padding-bottom: 20px;
+//   margin-bottom: 10px;
+// }
 
 h1 {
   color: $patina;
@@ -19,8 +27,19 @@ h1 {
 }
 
 h3 {
-  font-family: 'Lakki Reddy', cursive;
   margin-top: 15px;
+}
+
+// img {
+//   margin-left: 35%;
+// }
+
+#each-meal {
+  border-width: thin;
+  border-radius: 8px;
+  border-style: outset;
+  border-color: gray;
+  margin-bottom: 10px;
 }
 
 .selected {
@@ -43,7 +62,3 @@ h3 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-// .filter {
-//   width: 100%;
-// }

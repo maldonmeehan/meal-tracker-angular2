@@ -7,7 +7,8 @@ import { Meal } from './meal.model';
   directives: [MealListComponent],
   template: `
     <div id="header"><h1>Meal Tracker</h1></div>
-    <div class="container">
+
+    <div id="mealList" class="container">
       <meal-list
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">
@@ -29,3 +30,5 @@ export class AppComponent {
   mealWasSelected(clickedMeal: Meal): void {
   }
 }
+
+    // <img src="./resources/images/logo1.png" alt="Meal Tracker Logo">
