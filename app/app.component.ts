@@ -6,8 +6,8 @@ import { Meal } from './meal.model';
   selector: 'my-app',
   directives: [MealListComponent],
   template: `
+    <div id="header"><h1>Meal Tracker</h1></div>
     <div class="container">
-      <h1>Meal Tracker</h1>
       <meal-list
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">
