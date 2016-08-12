@@ -6,7 +6,10 @@ import { Meal } from './meal.model';
   selector: 'my-app',
   directives: [MealListComponent],
   template: `
-    <div id="header"><h1>Meal Tracker</h1></div>
+    <div id="header">
+      <img src="./resources/images/logo2.png" alt="Meal Tracker Logo">
+      <h1>Meal Tracker</h1>
+    </div>
 
     <div id="mealList" class="container">
       <meal-list
@@ -30,5 +33,3 @@ export class AppComponent {
   mealWasSelected(clickedMeal: Meal): void {
   }
 }
-
-    // <img src="./resources/images/logo1.png" alt="Meal Tracker Logo">
