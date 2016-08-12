@@ -24,7 +24,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>Skeleton Angular2 App!</h1>\n  "
+                        template: "\n    <h1>Meal Tracker!</h1>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
