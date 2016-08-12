@@ -11,19 +11,34 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var MealListComponent, AppComponent, Meal;
+    var MealComponent, MealListComponent, AppComponent, Meal;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            MealComponent = (function () {
+                function MealComponent() {
+                }
+                MealComponent = __decorate([
+                    core_1.Component({
+                        selector: 'meal-display',
+                        inputs: ['meal'],
+                        template: "\n    <h3>{{ meal.name }}</h3>\n  "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], MealComponent);
+                return MealComponent;
+            }());
+            exports_1("MealComponent", MealComponent);
             MealListComponent = (function () {
                 function MealListComponent() {
                     this.onMealSelect = new core_1.EventEmitter();
                 }
                 MealListComponent.prototype.mealClicked = function (clickedMeal) {
                     console.log('child', clickedMeal);
+                    this.selectedMeal = clickedMeal;
                     this.onMealSelect.emit(clickedMeal);
                 };
                 MealListComponent = __decorate([
@@ -31,7 +46,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         selector: 'meal-list',
                         inputs: ['mealList'],
                         outputs: ['onMealSelect'],
-                        template: "\n  <h3 *ngFor=\"#currentMeal of mealList\" (click)=\"mealClicked(currentMeal)\">\n    {{ currentMeal.name }}\n  </h3>\n  "
+                        directives: [MealComponent],
+                        template: "\n  <meal-display *ngFor=\"#currentMeal of mealList\"\n    (click)=\"mealClicked(currentMeal)\"\n    [class.selected]=\"currentMeal === selectedMeal\"\n    [meal]=\"currentMeal\">\n  </meal-display>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MealListComponent);
@@ -46,7 +62,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     ];
                 }
                 AppComponent.prototype.mealWasSelected = function (clickedMeal) {
-                    console.log(clickedMeal);
+                    console.log('parent', clickedMeal);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
