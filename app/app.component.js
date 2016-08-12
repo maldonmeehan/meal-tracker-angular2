@@ -20,14 +20,17 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             MealListComponent = (function () {
                 function MealListComponent() {
+                    this.onMealSelect = new core_1.EventEmitter();
                 }
                 MealListComponent.prototype.mealClicked = function (clickedMeal) {
-                    console.log(clickedMeal);
+                    console.log('child', clickedMeal);
+                    this.onMealSelect.emit(clickedMeal);
                 };
                 MealListComponent = __decorate([
                     core_1.Component({
                         selector: 'meal-list',
                         inputs: ['mealList'],
+                        outputs: ['onMealSelect'],
                         template: "\n  <h3 *ngFor=\"#currentMeal of mealList\" (click)=\"mealClicked(currentMeal)\">\n    {{ currentMeal.name }}\n  </h3>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
@@ -49,7 +52,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'my-app',
                         directives: [MealListComponent],
-                        template: "\n    <div class=\"container\">\n      <h1>Meal Tracker</h1>\n      <meal-list [mealList]=\"meals\"></meal-list>\n    </div>\n  "
+                        template: "\n    <div class=\"container\">\n      <h1>Meal Tracker</h1>\n      <meal-list\n        [mealList]=\"meals\"\n        (onMealSelect)=\"mealWasSelected($event)\">\n        </meal-list>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
