@@ -5,7 +5,8 @@ import { Component } from 'angular2/core';
   template: `
     <div class="container">
       <h1>Meal Tracker</h1>
-      <h3 *ngFor="#meal of meals">{{ meal.name }}</h3>
+      <h3 *ngFor="#meal of meals" (click)="mealWasSelected(meal)">
+      {{ meal.name }}</h3>
     </div>
   `
 })
@@ -16,6 +17,9 @@ export class AppComponent {
       new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354, 0),
       new Meal("Fries", "I only ate half of them", 354, 0),
     ];
+  }
+  mealWasSelected(clickedMeal: Meal): void {
+  console.log(clickedMeal);
   }
 }
 
