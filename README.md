@@ -1,25 +1,30 @@
 # EPICODUS STUDENT PROJECT
-## JavaScript | Angular JS
+## Angular JS Independent Project
 
-#### Template in Angular2, August 9, 2016
+### Meal Tracker, August 11, 2016
 
 #### By _**Maldon Meehan, Epicodus**_
 
 ## Description
-Angular Template....
+
+Create a meal tracking application. Users should be able to log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day (you are not required to keep track of multiple days' meals).
+
+User Stories
+
+* I want to log a food I have eaten by submitting a form with food name, calories and details.
+* I want to view a list of foods I have logged.
+* I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
+* I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
 
 ## Setup/Installation Requirements
 
-* Clone this repository
+* Clone this repository:
 * In the command-line run:
 ```
 $ npm install
 ```
 ```
 $ bower install
-```
-```
-$ apm install atom-typescript
 ```
 ```
 $ gulp build
@@ -34,7 +39,7 @@ $ gulp serve
 
 ## Support and contact details
 
-If you run into any issues or have questions, ideas, or concerns, please feel free to contact me on GitHub.
+If you run into any issues or have questions, ideas, or concerns, please feel free to contact Maldon on GitHub.
 
 ## Technologies Used
 
@@ -42,11 +47,10 @@ If you run into any issues or have questions, ideas, or concerns, please feel fr
 * jQuery
 * Bower
 * NPM
-* GitHub API
 
 ### License
 
 *MIT License*
-<a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>
+(https://opensource.org/licenses/MIT)
 
 Copyright (c) 2016 **_Epicodus_**
