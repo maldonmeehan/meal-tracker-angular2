@@ -7,6 +7,8 @@ import { Meal } from './meal.model';
   inputs: ['meal'],
   template: `
     <h3>{{ meal.name }}</h3>
+    <p>Details: {{ meal.details}}</p>
+    <p>Calories: {{ meal.calories }}</p>
   `
 })
 export class MealComponent {
