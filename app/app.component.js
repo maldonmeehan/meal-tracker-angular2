@@ -29,13 +29,12 @@ System.register(['angular2/core', './meal-list.component', './meal.model'], func
                     this.meals = [
                         new meal_model_1.Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354, 0),
                         new meal_model_1.Meal("Fries", "I only ate half of them", 354, 1),
-                        new meal_model_1.Meal("Mac and Cheese", "Loaded with cheese", 310, 2),
-                        new meal_model_1.Meal("Burgerville Meal", "Large fries with and a milkshake", 1000, 3),
+                        new meal_model_1.Meal("Soup and Salad", "A garden salad with red onion, tomatoes, black olives and oil and vinager dressing. With tomato soup", 400, 2),
+                        new meal_model_1.Meal("Burgerville Meal", "American Colossal Buerger, large fries and a Triple Berry Ice Cream Milkshake with extra whipped cream", 1500, 3),
                         new meal_model_1.Meal("Chipotle bowl", "Burrito bowl with chicken, fajita veggies, lettuce, tomato salsa, corn salsa, and guacamole.", 510, 4)
                     ];
                 }
                 AppComponent.prototype.mealWasSelected = function (clickedMeal) {
-                    console.log('parent', clickedMeal);
                 };
                 AppComponent = __decorate([
                     core_1.Component({

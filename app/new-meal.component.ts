@@ -20,14 +20,10 @@ export class NewMealComponent {
     this.onSubmitNewMeal = new EventEmitter();
   }
   addMeal(newMealNameInput: HTMLInputElement, newMealDetailsInput: HTMLInputElement, newMealCaloriesInput: HTMLInputElement){
-
   var newMeal = new Meal(newMealNameInput.value, newMealDetailsInput.value, parseInt(newMealCaloriesInput.value), 0);
   this.onSubmitNewMeal.emit(newMeal);
   newMealNameInput.value = "";
   newMealDetailsInput.value = "";
   newMealCaloriesInput.value = "";
-
-
   }
-
 }

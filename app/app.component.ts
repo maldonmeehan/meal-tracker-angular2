@@ -21,12 +21,11 @@ export class AppComponent {
     this.meals = [
       new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354, 0),
       new Meal("Fries", "I only ate half of them", 354, 1),
-      new Meal("Mac and Cheese", "Loaded with cheese", 310, 2),
-      new Meal("Burgerville Meal", "Large fries with and a milkshake", 1000, 3),
+      new Meal("Soup and Salad", "A garden salad with red onion, tomatoes, black olives and oil and vinager dressing. With tomato soup", 400, 2),
+      new Meal("Burgerville Meal", "American Colossal Buerger, large fries and a Triple Berry Ice Cream Milkshake with extra whipped cream", 1500, 3),
       new Meal("Chipotle bowl", "Burrito bowl with chicken, fajita veggies, lettuce, tomato salsa, corn salsa, and guacamole.", 510, 4)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {
-  console.log('parent', clickedMeal);
   }
 }
