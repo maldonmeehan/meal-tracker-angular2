@@ -11,7 +11,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var AppComponent, Meal;
     return {
         setters:[
             function (core_1_1) {
@@ -20,17 +20,32 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.meals = [
+                        new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354, 0),
+                        new Meal("Fries", "I only ate half of them", 354, 0),
+                    ];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>Meal Tracker!</h1>\n  "
+                        template: "\n    <div class=\"container\">\n      <h1>Meal Tracker</h1>\n      <h3 *ngFor=\"#meal of meals\">{{ meal.name }}</h3>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             }());
             exports_1("AppComponent", AppComponent);
+            Meal = (function () {
+                function Meal(name, details, calories, id) {
+                    this.name = name;
+                    this.details = details;
+                    this.calories = calories;
+                    this.id = id;
+                    this.healthy = false;
+                }
+                return Meal;
+            }());
+            exports_1("Meal", Meal);
         }
     }
 });
