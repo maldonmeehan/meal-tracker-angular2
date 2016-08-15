@@ -3,7 +3,7 @@ import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { EditMealDetailsComponent } from './edit-meal-details.component';
 import { NewMealComponent } from './new-meal.component';
-import {HealthyPipe} from './healthy.pipe';
+import { HealthyPipe } from './healthy.pipe';
 
 @Component({
   selector: 'meal-list',
